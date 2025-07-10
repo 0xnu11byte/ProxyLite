@@ -1,0 +1,4 @@
+# Example payloads for your plugin
+PAYLOAD_1
+PAYLOAD_2
+PAYLOAD_3

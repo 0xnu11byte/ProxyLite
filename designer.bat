@@ -1,0 +1,1 @@
+c:\users\gaurav\appdata\local\packages\pythonsoftwarefoundation.python.3.12_qbz5n2kfra8p0\localcache\local-packages\python312\site-packages/PySide6/designer.exe
