@@ -44,3 +44,31 @@ python proxylite.py
 - Request crafting and sending
 - Response viewing
 - Modular for future extensions
+
+  # ProxyLite Plugin Generator
+
+ProxyLite supports easy plugin development to extend its functionality for testing, exploitation, automation, and more. This guide explains the basic plugin structure and templates you can use to start building your own plugins.
+
+---
+
+## Plugin Template Files
+
+### 1. `__init__.py`
+
+The core plugin file defines metadata and the main `run` function.
+
+```python
+# {plugin_name}/__init__.py
+
+name = "{name}"
+description = "{description}"
+author = "{author}"
+
+def run(request, response):
+    try:
+        print(f"[{name}] Running on request to {{request.url}}")
+        # Add your plugin logic here
+
+    except Exception as e:
+        print(f"[{name}] Error: {{e}}")
+```
