@@ -1,15 +1,31 @@
 # ProxyLite
 ![logo](proxylite/assets/proxylite_logo.png)
 ---
-**ProxyLite** is a lightweight Burp Repeater alternative with:
+# ProxyLite
 
-✅ Intercept tab (live HTTP/HTTPS request capture)
+ProxyLite is an open-source, lightweight HTTP/HTTPS proxy and request tester designed for security researchers, penetration testers, and developers. It combines a clean, modular architecture built with PySide6 and mitmproxy, offering both usability and powerful extensibility.
 
-✅ Repeater tab (craft/send requests, view responses)
+## Key Features
 
-✅ Clean, modular, open-source architecture
+- **Traffic Capture Module:**  
+  Monitor and capture live HTTP and HTTPS requests and responses in real-time, with full inspection and modification capabilities.
 
-✅ Built using PySide6, mitmproxy, requests
+- **Request Crafting Console:**  
+  Build, edit, and resend HTTP requests effortlessly to probe APIs, web applications, or services, and immediately analyze the responses.
+
+- **Plugin-Friendly:**  
+  Extend ProxyLite’s core with custom plugins—create your own testing, exploitation, or automation tools easily.
+
+- **Modern UI:**  
+  Intuitive PySide6-based interface with a clean, user-friendly design optimized for productivity.
+
+- **Flexible Architecture:**  
+  Seamlessly integrates with popular Python libraries like mitmproxy and requests, making scripting and automation straightforward.
+
+---
+
+ProxyLite empowers users to quickly discover vulnerabilities, debug web services, and experiment with HTTP traffic — all within a lightweight and customizable framework.
+
 
 ## Usage
 1. Install dependencies:
