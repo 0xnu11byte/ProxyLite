@@ -1,9 +1,14 @@
 # ProxyLite
-
+![logo](proxylite/assets/proxylite_logo.png)
+---
 **ProxyLite** is a lightweight Burp Repeater alternative with:
+
 ✅ Intercept tab (live HTTP/HTTPS request capture)
+
 ✅ Repeater tab (craft/send requests, view responses)
+
 ✅ Clean, modular, open-source architecture
+
 ✅ Built using PySide6, mitmproxy, requests
 
 ## Usage
