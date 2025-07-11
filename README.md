@@ -1,4 +1,4 @@
-# ProxyLite
+# ProxyLite : Customizable Tool for Web App Testing
 ---
 ![proxylite](assets/proxylite.png)
 ---
