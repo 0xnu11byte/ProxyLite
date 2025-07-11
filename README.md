@@ -45,30 +45,116 @@ python proxylite.py
 - Response viewing
 - Modular for future extensions
 
-  # ProxyLite Plugin Generator
+  # ProxyLite Plugins
 
-ProxyLite supports easy plugin development to extend its functionality for testing, exploitation, automation, and more. This guide explains the basic plugin structure and templates you can use to start building your own plugins.
+ProxyLite is a flexible, modular intercepting proxy designed for **pentesters, bug bounty hunters, and developers** who want to extend its functionality easily using **plugin architecture**.
+
+## Why Plugins?
+
+* Extend ProxyLite for custom workflows.
+* Automate repetitive pentest checks.
+* Integrate external services directly into your workflow.
+* Share and reuse community plugins.
+
+## Current Plugins Available
+
+### 1️⃣ Shodan Lookup
+
+* Checks intercepted domains and IPs against the Shodan API.
+* Displays open ports, banner data, and known vulnerabilities directly inside ProxyLite.
+* Useful for quick OSINT and exposure analysis.
+
+### 2️⃣ VirusTotal Local
+
+* Checks domains, IPs, and hashes in requests/responses against VirusTotal.
+* Local plugin using your API key for fast reputation checking.
+* Highlights potential malware domains and compromised assets.
+
+### 3️⃣ SQLi Tester
+
+* Tests URL and parameter fields automatically for **SQL Injection** payloads.
+* Supports Boolean-based, error-based, and time-based checks.
+* Highlights vulnerable parameters directly inside ProxyLite.
+
+### 4️⃣ CORS Checker
+
+* Scans endpoints for **CORS misconfigurations**.
+* Detects wildcard origins, insecure allow credentials, and reflection issues.
+* Outputs clear misconfiguration warnings for pentesters.
+
+### 5️⃣ OpenAI Weakness Scanner
+
+* Uses OpenAI API to analyze captured requests/responses.
+* Identifies potential security weaknesses and misconfigurations.
+* Generates concise, actionable vulnerability summaries using LLM analysis.
+
+### 6️⃣ Header Security Checker
+
+* Scans intercepted responses for missing or weak security headers.
+* Checks for CSP, X-Frame-Options, HSTS, X-Content-Type-Options, and others.
+* Reports improvement recommendations for hardening.
+
+### 7️⃣ JavaScript Endpoint Extractor
+
+* Extracts JavaScript endpoints from intercepted traffic.
+* Parses and lists potential hidden APIs for testing.
+
+### 8️⃣ Passive Recon Plugin
+
+* Performs WHOIS, subdomain enumeration, and DNS records lookup.
+* Useful for passive footprinting during recon workflows.
 
 ---
 
-## Plugin Template Files
+## Developing Your Own Plugins
 
-### 1. `__init__.py`
+ProxyLite supports **hot-reloadable plugins**:
 
-The core plugin file defines metadata and the main `run` function.
+* Plugins are placed under `proxylite/plugins/`.
+* Each plugin has a structured template:
+
+  * `name`, `description`, `author`.
+  * `run(self, request, response)` method to process flows.
+* Uses simple Python with direct request/response object access.
+
+**Example plugin skeleton:**
 
 ```python
-# {plugin_name}/__init__.py
-
-name = "{name}"
-description = "{description}"
-author = "{author}"
+name = "My Custom Plugin"
+description = "Example plugin for testing headers."
+author = "YourName"
 
 def run(request, response):
-    try:
-        print(f"[{name}] Running on request to {{request.url}}")
-        # Add your plugin logic here
-
-    except Exception as e:
-        print(f"[{name}] Error: {{e}}")
+    if "admin" in request.url:
+        print("[!] Admin panel detected:", request.url)
 ```
+
+You can also load payload files, generate automated scans, or call external APIs within your plugin.
+
+---
+
+## Contributing Plugins
+
+* Submit your plugins via pull requests to the ProxyLite GitHub repository.
+* Share them in the community to help others enhance ProxyLite.
+* Join discussions for ideas on advanced exploitation modules.
+
+---
+
+ProxyLite aims to be the **lightweight Burp alternative** for tinkerers, researchers, and practical pentesters with **extensible plugin-based power.**
+
+<p align="center">
+  <a href="https://github.com/YourUsername">
+    <img src="https://img.icons8.com/ios-glyphs/90/github.png" alt="GitHub" width="50" height="50">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/YourLinkedIn/">
+    <img src="https://img.icons8.com/ios-filled/90/linkedin.png" alt="LinkedIn" width="50" height="50">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/YourUsername">GitHub</a> &nbsp;&bull;&nbsp;
+  <a href="https://www.linkedin.com/in/YourLinkedIn/">LinkedIn</a>
+</p>
+
