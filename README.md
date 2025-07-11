@@ -1,7 +1,7 @@
 # ProxyLite
+---
 ![proxylite](assets/proxylite.png)
 ---
-# ProxyLite
 
 ProxyLite is an open-source, lightweight HTTP/HTTPS proxy and request tester designed for security researchers, penetration testers, and developers. It combines a clean, modular architecture built with PySide6 and mitmproxy, offering both usability and powerful extensibility.
 
