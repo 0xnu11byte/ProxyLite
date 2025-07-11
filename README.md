@@ -1,5 +1,5 @@
 # ProxyLite
-![logo](proxylite/assets/proxylite_logo.png)
+![logo](proxylite/assets/proxylite.png)
 ---
 # ProxyLite
 
@@ -48,6 +48,9 @@ python proxylite.py
   # ProxyLite Plugins
 
 ProxyLite is a flexible, modular intercepting proxy designed for **pentesters, bug bounty hunters, and developers** who want to extend its functionality easily using **plugin architecture**.
+---
+![Plugins](proxylite/assets/Screenshot.png)
+---
 
 ## Why Plugins?
 
