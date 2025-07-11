@@ -144,17 +144,14 @@ You can also load payload files, generate automated scans, or call external APIs
 ProxyLite aims to be the **lightweight Burp alternative** for tinkerers, researchers, and practical pentesters with **extensible plugin-based power.**
 
 <p align="center">
-  <a href="https://github.com/YourUsername">
+  <a href="https://github.com/0xnu11byte">
     <img src="https://img.icons8.com/ios-glyphs/90/github.png" alt="GitHub" width="50" height="50">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/YourLinkedIn/">
+<!--   <a href="https://www.linkedin.com/in/YourLinkedIn/">
     <img src="https://img.icons8.com/ios-filled/90/linkedin.png" alt="LinkedIn" width="50" height="50">
+  </a> -->
+  <a href="https://www.instagram.com/nu11byte/">
+    <img src="https://img.icons8.com/ios-filled/90/instagram-new.png" alt="Instagram" width="50" height="50">
   </a>
 </p>
-
-<p align="center">
-  <a href="https://github.com/YourUsername">GitHub</a> &nbsp;&bull;&nbsp;
-  <a href="https://www.linkedin.com/in/YourLinkedIn/">LinkedIn</a>
-</p>
-
